@@ -3,7 +3,12 @@
     Button 示例
   </div>
   <h1>示例</h1>
-  <Button>PCK</Button>
+  <div>
+    <Button>PCK</Button>
+    <Button theme="button">PCK</Button>
+    <Button theme="link">PCK</Button>
+    <Button theme="text">PCK</Button>
+  </div>
 </template>
 
 <script lang="ts">
