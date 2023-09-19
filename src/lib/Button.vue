@@ -1,5 +1,6 @@
 <template>
-  <button class="onion-button" :class="classes">
+  <button class="onion-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="onion-loadingIndicator"></span>
     <slot />
   </button>
 </template>
@@ -20,6 +21,14 @@ export default {
     level: {
       type: String,
       default: "normal",
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
@@ -43,6 +52,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .onion-button {
   box-sizing: border-box;
   height: $h;
@@ -145,5 +155,35 @@ $red: red;
       }
     }
   }
+  &.onion-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.onion-theme-link, &.onion-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+    }
+  }
+  > .onion-loadingIndicator{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: onion-spin 1s infinite linear;
+  }
+}
+@keyframes onion-spin {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
 }
 </style>
