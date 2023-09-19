@@ -3,12 +3,12 @@
     <div class="onion-dialog-overlay" @click="onClickOverlay"></div>
     <div class="onion-dialog-wrapper">
       <div class="onion-dialog">
-        <header>标题
+        <header>
+          <slot name="title" />
           <span class="onion-dialog-close" @click="close"></span>
         </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot name="content" />
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
