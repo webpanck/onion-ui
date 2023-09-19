@@ -81,17 +81,15 @@ $radius: 4px;
       background: darken(white, 5%);;
     }
   }
-  &.onion-theme-button{
-    &.onion-size-big{
-      font-size: 24px;
-      height: 48px;
-      padding: 0 16px
-    }
-    &.onion-size-small{
-      font-size: 12px;
-      height: 20px;
-      padding: 0 4px;
-    }
+  &.onion-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px;
+  }
+  &.onion-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
   }
 }
 </style>
