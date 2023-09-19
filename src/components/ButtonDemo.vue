@@ -4,7 +4,7 @@
   </div>
   <h1>示例</h1>
   <div>
-    <Button>PCK</Button>
+    <Button @click="onClick">PCK</Button>
     <Button theme="button">PCK</Button>
     <Button theme="link">PCK</Button>
     <Button theme="text">PCK</Button>
