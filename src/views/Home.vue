@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="topnavAndBanner">
     <Topnav />
     <div class="banner">
       <h1>洋葱UI</h1>
@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.topnavAndBanner {
+  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+}
 .banner {
   padding: 100px 0;
   display: flex;
