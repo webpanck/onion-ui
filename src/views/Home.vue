@@ -4,7 +4,7 @@
       <Topnav />
       <div class="banner">
         <h1>洋葱UI</h1>
-        <h2>一个贼厉害的 UI 框架</h2>
+        <h2>一个有点东西的 UI 框架</h2>
         <p class="actions">
           <a>GitHub</a>
           <router-link to="/doc">开始</router-link>
@@ -48,12 +48,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
+$green: #6802bc;
 $border-radius: 4px;
-$color: #007974;
+$color: #430079;
 .topnavAndBanner {
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  background: linear-gradient(145deg,
+    rgb(229, 198, 255) 0%,
+    rgb(219, 105, 243) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
+  //border: 1px solid red;
 }
 .features {
   margin: 64px auto;
